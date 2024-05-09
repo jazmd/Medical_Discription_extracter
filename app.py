@@ -29,7 +29,7 @@ def get_gemini_response(input,image):
 
 ##initialize our streamlit app
 
-st.set_page_config(page_title="Gemini Image Demo")
+st.set_page_config(page_title="Medical Discription Extractor")
 
 st.header("Medical Descriptions Extracter")
 input=st.text_input("Input Prompt: ",key="input")
