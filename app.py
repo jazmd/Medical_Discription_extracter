@@ -1,5 +1,4 @@
-# Q&A Chatbot
-#from langchain.llms import OpenAI
+
 
 from dotenv import load_dotenv
 
@@ -21,7 +20,7 @@ genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 ## Function to load OpenAI model and get respones
 
 def get_gemini_response(input,image):
-    model = genai.GenerativeModel('gemini-pro-vision')
+    model = genai.GenerativeModel('gemini-1.5-pro-latest')
     if input!="":
        response = model.generate_content([input,image])
     else:
