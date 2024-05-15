@@ -25,7 +25,7 @@ def get_gemini_response(image):
 
 ##initialize our streamlit app
 
-st.set_page_config(page_title="Medical Discription Extractor")
+st.set_page_config(page_title="💡 Medical Description Analyzer 📄")
 
 st.header("Medical Descriptions Extracter")
 
