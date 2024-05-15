@@ -25,9 +25,9 @@ def get_gemini_response(image):
 
 ##initialize our streamlit app
 
-st.set_page_config(page_title="💡 Medical Description Analyzer 📄")
+st.set_page_config(page_title=" Medical Description Analyzer ")
 
-st.header("Medical Descriptions Extracter")
+st.header("💡 Medical Descriptions Extracter 📄")
 
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png", "pdf"])
 image = ""
