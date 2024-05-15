@@ -32,7 +32,7 @@ def get_gemini_response(input,image):
 st.set_page_config(page_title="Medical Discription Extractor")
 
 st.header("Medical Descriptions Extracter")
-input=st.text_input("Input Prompt: ",key="input")
+input=st.text_input("Write a Prompt for the Given Discription OR Reports: ",key="input")
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png","pdf"])
 image=""   
 if uploaded_file is not None:
@@ -40,7 +40,7 @@ if uploaded_file is not None:
     st.image(image, caption="Uploaded Image.", use_column_width=True)
 
 
-submit=st.button("Tell me about the image")
+submit=st.button("Tell me about this Discription")
 
 ## If ask button is clicked
 
