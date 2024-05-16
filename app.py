@@ -18,9 +18,9 @@ genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 def get_gemini_response(image):
     model = genai.GenerativeModel('gemini-1.5-pro-latest')
     # Custom prompt template for medical document analysis
-    prompt_template = "Analyze this medical document and provide a concise summary of the key findings, diagnosis, treatment plan, or any relevant information. Please use plain language for easy understanding."
+    # prompt_template = "Analyze this medical document and provide a concise summary of the key findings, diagnosis, treatment plan, or any relevant information. Please use plain language for easy understanding."
 
-    response = model.generate_content([prompt_template, image])
+    response = model.generate_content([input, image])
     return response.text
 
 ##initialize our streamlit app
@@ -28,7 +28,7 @@ def get_gemini_response(image):
 st.set_page_config(page_title=" Medical Description Analyzer ")
 
 st.header("💡 Medical Descriptions Extracter 📄")
-
+input=st.text_input("Input Prompt: ",key="input")
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png", "pdf"])
 image = ""
 if uploaded_file is not None:
