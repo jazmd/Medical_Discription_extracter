@@ -36,4 +36,4 @@ if submit:
         st.subheader("The Response is")
         st.write(response)
     else:
-        st.warning("Please upload an image first.") imorove this code also make it simple
+        st.warning("Please upload an image first.") 
